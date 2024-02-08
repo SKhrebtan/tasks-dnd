@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tasks-dnd/static/css/main.7acaea2f.css",
+    "main.js": "/tasks-dnd/static/js/main.07d3183d.js",
+    "index.html": "/tasks-dnd/index.html",
+    "main.7acaea2f.css.map": "/tasks-dnd/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/tasks-dnd/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
