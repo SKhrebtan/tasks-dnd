@@ -8,4 +8,5 @@ gap: 10px;
 
 export const StyledLi = styled.li`
 color: ${props => (props.$data ? 'blue' : '')};
+cursor: pointer;
 `
