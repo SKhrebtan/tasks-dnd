@@ -1,11 +1,12 @@
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList,TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { PlusButton } from 'components/PlusButton/PlusButton';
 import { DnDList } from 'components/DnDList/DnDList';
-import { addTask } from '../../redux/projectsSlice';
+import { addTask , addItem} from '../../redux/projectsSlice';
 import { useDispatch } from 'react-redux';
-
-export const TaskTab = ({ currentProjectId, id, data,index }) => {
+// import { TabPanelJsx } from './TabPanel';
+import { AddTaskBtn } from 'components/AddTaskBtn/AddTaskBtn';
+export const TaskTab = ({ currentProjectId, id, data}) => {
   const dispatch = useDispatch();
     return (currentProjectId === id &&
       <Tabs >
@@ -16,10 +17,14 @@ export const TaskTab = ({ currentProjectId, id, data,index }) => {
     })}
           <PlusButton func={()=>dispatch(addTask(currentProjectId))} currentProjectId={currentProjectId} />
            </TabList>
-       
-                         {data.map(tasks => {
+        {/* {data.map(task =>
+          <TabPanel key={task.id}><TabPanelJsx currentProjectId={currentProjectId} taskId={task.id} task={task} /></TabPanel>
+       )} */}
+        {data.map(tasks => {
+                           const taskID= tasks.id
               return <TabPanel key={tasks.id}>
-                <DnDList currentProjectId={currentProjectId} taskId={id} tasks={tasks}/>      
+                <DnDList key={tasks.id} currentProjectId={currentProjectId} taskId={tasks.id} tasks={tasks} />  
+                <AddTaskBtn func={() => dispatch(addItem({ currentProjectId, taskID }))}>+</AddTaskBtn>
     </TabPanel>
 })}
   </Tabs>

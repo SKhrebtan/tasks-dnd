@@ -1,6 +1,6 @@
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { DndProvider } from 'react-dnd'
-import { TasksTabPanel } from "./TabPanel/TabPanel";
+import { TasksTabPanel } from "./TabPanel/TasksTabPanel";
 
 export const App = () => {
   return (
