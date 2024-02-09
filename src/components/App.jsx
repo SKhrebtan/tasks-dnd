@@ -1,9 +1,13 @@
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd'
 import { TasksTabPanel } from "./TabPanel/TabPanel";
 
 export const App = () => {
   return (
     <div>
-      <TasksTabPanel/>
+      <DndProvider backend={HTML5Backend}>
+        <TasksTabPanel />
+        </DndProvider>
     </div>
   );
 };
