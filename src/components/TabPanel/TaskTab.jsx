@@ -4,16 +4,18 @@ import { PlusButton } from 'components/PlusButton/PlusButton';
 import { DnDList } from 'components/DnDList/DnDList';
 import { addTask , addItem} from '../../redux/projectsSlice';
 import { useDispatch } from 'react-redux';
-// import { TabPanelJsx } from './TabPanel';
+import { StyledTabs } from './TaskTab.styled';
 import { AddTaskBtn } from 'components/AddTaskBtn/AddTaskBtn';
+import { ReactComponent as SvgOne } from '../../image/1.svg'
+import {ReactComponent as SvgTwo} from '../../image/2.svg'
 export const TaskTab = ({ currentProjectId, id, data}) => {
   const dispatch = useDispatch();
     return (currentProjectId === id &&
-      <Tabs >
+      <StyledTabs >
         
           <TabList style={{paddingLeft: '20px', position: 'relative'}}>
     {data.map(({ id }, index) => {
-    return <Tab key={id}>View #{index}</Tab>
+    return <Tab key={id}><span className='span'><SvgOne/>View #{index+1}<SvgTwo/></span></Tab>
     })}
           <PlusButton func={()=>dispatch(addTask(currentProjectId))} currentProjectId={currentProjectId} />
            </TabList>
@@ -27,6 +29,6 @@ export const TaskTab = ({ currentProjectId, id, data}) => {
                 <AddTaskBtn func={() => dispatch(addItem({ currentProjectId, taskID }))}>+</AddTaskBtn>
     </TabPanel>
 })}
-  </Tabs>
+  </StyledTabs>
     )
 }
