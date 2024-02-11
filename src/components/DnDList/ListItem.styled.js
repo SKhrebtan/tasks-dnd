@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledLi = styled.li`
-width:200px;
-padding: 20px;
-/* background-color: grey; */
+width:450px;
+padding: 10px;
+background-color: rgba(25, 118, 210, 0.3);
 `

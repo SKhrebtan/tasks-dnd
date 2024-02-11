@@ -15,11 +15,13 @@ export const ListItem = memo(function Listitem({ id, taskId,currentProjectId,val
 	}))
 
 	const isActive = canDrop && isOver
-	let backgroundColor = '#222'
+	let backgroundColor = 'rgba(0, 0, 0, 0.03)'
+	let transform;
 	if (isActive) {
-		backgroundColor = 'darkgreen'
+		transform = 'rotate(2deg)'
+		backgroundColor = 'rgba(25, 118, 210, 0.3)'
 	} else if (canDrop) {
-		backgroundColor = 'darkkhaki'
+		backgroundColor = 'rgba(0, 0, 0, 0.03)'
     }
     
 
@@ -40,11 +42,12 @@ export const ListItem = memo(function Listitem({ id, taskId,currentProjectId,val
 		}),
 	}))
 
-    const opacity = isDragging ? 0.4 : 1
-    
+	const background = isDragging ? 'white' : '';
+	
+	const border = isDragging ? '1px dashed rgba(0, 0, 0, 0.38)': ''
     return (
-        <div ref={drag}  style={{ opacity }}>
-            <StyledLi ref={drop} style={{ backgroundColor }} data-testid="dustbin">{value}</StyledLi>
+        <div ref={drag}  style={{ background, width:'470px', border}}>
+            <StyledLi ref={drop} style={{ backgroundColor, transform}} data-testid="dustbin">{value}</StyledLi>
             <ul>
                 {subtasks?.map(({ id, value }) => <li key={id}>{value}</li>)}
             </ul>
