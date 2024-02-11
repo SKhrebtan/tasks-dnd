@@ -1,4 +1,4 @@
-import { Tab, gitTabList,TabPanel} from 'react-tabs';
+import { Tab,TabList,TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { PlusButton } from 'components/PlusButton/PlusButton';
 import { DnDList } from 'components/DnDList/DnDList';
