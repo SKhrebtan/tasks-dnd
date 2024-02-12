@@ -7,10 +7,9 @@ const BOUND_HEIGHT = 70;
 
 const containerStyles = {
   display: "flex",
+  width: '486px',
   flexDirection: "column",
   gap: 8,
-  width: 350,
-  height: 500,
   background: "white",
 };
 
@@ -21,8 +20,11 @@ const CARDS = Array.from({ length: 20 }).map((_, idx) => ({
 
 const Container = () => {
   const [cards, setCards] = useState(CARDS);
+  const [isHovered, setIsHovered] = useState('')
   const containerRef = useRef(null);
-
+  const handleHover = (id) => {
+  setIsHovered(id)
+}
   const dndManager = useDragDropManager();
   const monitor = dndManager.getMonitor();
 
@@ -63,6 +65,8 @@ const Container = () => {
           index={idx}
           {...card}
           enableDnd
+          handleHover={handleHover}
+          hoveredItemId={isHovered}
           onSort={handleSort}
         />
       ))}
