@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tasks-dnd/static/css/main.5665f791.css",
-    "main.js": "/tasks-dnd/static/js/main.14f14fe8.js",
+    "main.css": "/tasks-dnd/static/css/main.c9469999.css",
+    "main.js": "/tasks-dnd/static/js/main.3aaca852.js",
     "static/media/1.svg": "/tasks-dnd/static/media/1.2c46f8ea68262f44632ae412b288f0bc.svg",
     "index.html": "/tasks-dnd/index.html",
     "static/media/2.svg": "/tasks-dnd/static/media/2.2919f967bfaa837f93d848f9e26f5b8a.svg",
-    "main.5665f791.css.map": "/tasks-dnd/static/css/main.5665f791.css.map",
-    "main.14f14fe8.js.map": "/tasks-dnd/static/js/main.14f14fe8.js.map"
+    "main.c9469999.css.map": "/tasks-dnd/static/css/main.c9469999.css.map",
+    "main.3aaca852.js.map": "/tasks-dnd/static/js/main.3aaca852.js.map"
   },
   "entrypoints": [
-    "static/css/main.5665f791.css",
-    "static/js/main.14f14fe8.js"
+    "static/css/main.c9469999.css",
+    "static/js/main.3aaca852.js"
   ]
 }
