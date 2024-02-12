@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tasks-dnd/static/css/main.c9469999.css",
-    "main.js": "/tasks-dnd/static/js/main.3aaca852.js",
-    "static/media/1.svg": "/tasks-dnd/static/media/1.2c46f8ea68262f44632ae412b288f0bc.svg",
-    "index.html": "/tasks-dnd/index.html",
-    "static/media/2.svg": "/tasks-dnd/static/media/2.2919f967bfaa837f93d848f9e26f5b8a.svg",
-    "main.c9469999.css.map": "/tasks-dnd/static/css/main.c9469999.css.map",
-    "main.3aaca852.js.map": "/tasks-dnd/static/js/main.3aaca852.js.map"
+    "main.css": "/static/css/main.c9469999.css",
+    "main.js": "/static/js/main.0939bf12.js",
+    "static/media/1.svg": "/static/media/1.2c46f8ea68262f44632ae412b288f0bc.svg",
+    "index.html": "/index.html",
+    "static/media/2.svg": "/static/media/2.2919f967bfaa837f93d848f9e26f5b8a.svg",
+    "main.c9469999.css.map": "/static/css/main.c9469999.css.map",
+    "main.0939bf12.js.map": "/static/js/main.0939bf12.js.map"
   },
   "entrypoints": [
     "static/css/main.c9469999.css",
-    "static/js/main.3aaca852.js"
+    "static/js/main.0939bf12.js"
   ]
 }
